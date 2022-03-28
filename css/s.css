@@ -1,0 +1,225 @@
+/* Start Variables */
+:root {
+    --main-color:#19c8fa;
+    --transparnt-color:rgb(15 116 143 / 70%) ;
+    --section-padding:100px
+}
+/* End Variables */
+/* start Global ruls */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+      }
+  ul {
+    list-style: none;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End Global ruls */
+/* Start Compnant */
+.main-heading {
+    text-align: center;
+}
+.main-heading h2 {
+font-weight: normal;
+font-size: 40px;
+position: relative;
+margin-bottom: 70px;
+text-transform: uppercase;
+}
+.main-heading h2::before {
+     content: "";
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+     height: 2px;
+     width: 140px;
+     background-color: #333;
+     bottom: -30px;
+}
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    transform: translateX(-50%);
+    bottom: -37px;
+    background-color: white;
+
+}
+.main-heading p {
+width: 550px;
+margin: 0 auto 100px;
+max-width: 100%;
+line-height: 2;
+color: #777;
+}
+/* Start Compnant */
+/* start Contact */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:767px) {
+    .contact .content {
+        flex-direction: column;
+    }
+}
+.contact .content form {
+    flex-basis: 70%;
+}
+.contact .content form .main-input {
+    display: block;
+    padding: 20px;
+    border:  1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.contact .content form .main-input:focus {
+    outline: none;
+}
+.contact .content form textarea.main-input  {
+    height: 200px;
+}
+.contact .content form input[type=submit] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px ;
+    border: none;
+    display: flex;
+   margin-left: auto;
+   text-transform: none;
+   cursor: pointer;
+}
+@media (max-width:767px) {
+    .contact .content form input[type=submit] {
+        margin: auto;
+    }
+}
+.contact .content .info {
+    flex-basis: 25%;
+}
+@media (max-width:767px) {
+    .contact .content .info {
+        order: -1;
+        text-align: center;
+    }  
+}
+.contact .content .info h4 {
+text-transform: uppercase;
+margin-bottom: 30px;
+font-weight: bold;
+font-size: 18px;
+}
+.contact .content .info .phone {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+.contact .content .info h4:nth-of-type(2) {
+    margin-top: 90px;
+}
+@media (max-width:767px) {
+    .contact .content .info h4:nth-of-type(2) {
+        margin-top: 30px;
+    }
+}
+.contact .content .info address {
+    columns: #777;
+    line-height: 2;
+}
+@media (max-width:767px) {
+    .contact .content .info address {
+        margin-bottom: 20px;
+    }
+}
+
+/* End Contact */
+/* Srart Footer */
+.footer {
+    background-image: url(../img/subscribe.jpg);
+    color: white;
+    padding-top:calc( var(--section-padding) / 2);
+    padding-bottom:calc( var(--section-padding) / 2);
+    position: relative;
+    background-size: cover;
+    text-align: center;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+   }
+.footer .container {
+    position: relative;
+  }
+  .footer img {
+      margin-bottom: 20px;
+  }
+  .footer p:not(.copyright) {
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    font-size: 22px;
+    width: fit-content;
+    margin: 20px auto;
+  }
+.footer .social-icons i {
+   padding: 10px 15px;
+}
+.footer .copyright {
+    margin-top: 60px;
+
+}
+.footer .copyright span {
+color: var(--main-color);
+font-weight: bold;
+}
+
+/* End Footer */
